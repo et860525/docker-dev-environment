@@ -1,6 +1,7 @@
 services:
   app:
     build: .
+    image: flask-dev-image
     container_name: flask-app
     command: "python src/main.py"
     ports:
