@@ -5,7 +5,7 @@ FROM python:3.12
 WORKDIR /app
 
 # 目前的路徑裡的文件，複製到容器 /app 裡
-COPY . .
+COPY . /app/
 
 # 在 image 建置時執行安裝套件的動作
 RUN pip install --no-cache-dir -r requirements.txt
@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8888
 
 # 執行以下指令
-CMD ["python", "src/main.py"]
+CMD ["python", "main.py"]
